@@ -28,7 +28,7 @@ script:
 # Push
 after_success:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push udagram-api-feed julianhub/udagram-api-feed:v1
-- docker push udagram-api-user julianhub/udagram-api-user:v1
-- docker push udagram-frontend julianhub/udagram-frontend:v1
-- docker push udagram-reverseproxy julianhub/reverseproxy:v1
+- docker push julianhub/udagram-api-feed:v1
+- docker push julianhub/udagram-api-user:v1
+- docker push julianhub/udagram-frontend:v1
+- docker push julianhub/reverseproxy:v1
