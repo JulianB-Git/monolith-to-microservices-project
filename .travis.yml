@@ -31,4 +31,4 @@ after_success:
 - docker push julianbhub/udagram-api-feed:v1
 - docker push julianbhub/udagram-api-user:v1
 - docker push julianbhub/udagram-frontend:v1
-- docker push julianbhub/reverseproxy:v1
+- docker push julianbhub/reverseproxy:v2
