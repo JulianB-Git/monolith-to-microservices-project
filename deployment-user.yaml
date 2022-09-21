@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-user
+  labels:
+    app: api-user
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-user
+  template:
+    metadata:
+      labels:
+        app: api-user
+    spec:
+      containers:
+      - name: udagram-api-user
+        image: julianbhub/udagram-api-user:v1
+        envFrom:
+          - configMapRef:
+              name: env-configmap
+          - secretRef:
+              name: env-secrets
+          - secretRef:
+              name: aws-secret
+        ports:
+        - containerPort: 8080

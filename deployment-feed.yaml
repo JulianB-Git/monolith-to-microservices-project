@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-feed
+  labels:
+    app: api-feed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-feed
+  template:
+    metadata:
+      labels:
+        app: api-feed
+    spec:
+      containers:
+      - name: udagram-api-feed
+        image: julianbhub/udagram-api-feed:v1
+        envFrom:
+          - configMapRef:
+              name: env-configmap
+          - secretRef:
+              name: env-secrets
+          - secretRef:
+              name: aws-secret
+        ports:
+        - containerPort: 8080
