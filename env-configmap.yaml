@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: env-configmap
 data:
-  POSTGRES_HOST: udagrambenadedev.ch7cxqpuzij4.us-east-1.rds.amazonaws.com
-  POSTGRES_DB: udagrambenadedev
+  POSTGRES_HOST: udagramcailandev.ct3iymhoy7va.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: udagramcailandev
   URL: http://localhost:8100
-  AWS_BUCKET: udagram-1333223-bucket-dev
+  AWS_BUCKET: udagram-cailan-bucket-dev
   AWS_REGION: us-east-1
   
